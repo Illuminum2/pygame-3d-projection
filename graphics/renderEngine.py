@@ -34,16 +34,16 @@ class RenderEngine:
             self.cam.move((0, 1, 0), self.dw.pj.R)
 
         if key[pg.K_LEFT]:
-            self.cam.rotate(-5, self.dw.pj.R[1])
+            self.cam.rotate(-5, self.dw.pj.R[1], self.dw.pj.R)
             self.dw.pj.updateR()
         elif key[pg.K_RIGHT]:
-            self.cam.rotate(5, self.dw.pj.R[1])
+            self.cam.rotate(5, self.dw.pj.R[1], self.dw.pj.R)
             self.dw.pj.updateR()
         if key[pg.K_UP]:
-            self.cam.rotate(-5, self.dw.pj.R[0])
+            self.cam.rotate(-5, self.dw.pj.R[0], self.dw.pj.R)
             self.dw.pj.updateR()
         elif key[pg.K_DOWN]:
-            self.cam.rotate(5, self.dw.pj.R[0])
+            self.cam.rotate(5, self.dw.pj.R[0], self.dw.pj.R)
             self.dw.pj.updateR()
 
         elif key[pg.K_ESCAPE]:
